@@ -21,6 +21,7 @@
 		F4D5072B2A55D286000E741B /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5072A2A55D286000E741B /* ProgressCollectionViewCell.swift */; };
 		F4D5072D2A55D2A5000E741B /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5072C2A55D2A5000E741B /* HabitCollectionViewCell.swift */; };
 		F4D5072F2A55D2C7000E741B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5072E2A55D2C7000E741B /* MainScreenViewController.swift */; };
+		F4D507332A5701DC000E741B /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D507322A5701DC000E741B /* InfoText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F4D5072A2A55D286000E741B /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4D5072C2A55D2A5000E741B /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4D5072E2A55D2C7000E741B /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F4D507322A5701DC000E741B /* InfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D507222A55D189000E741B /* InfoViewController.swift */,
+				F4D507322A5701DC000E741B /* InfoText.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				F4D507212A55D165000E741B /* HabitsStore.swift in Sources */,
 				F4D507092A55CC4E000E741B /* ViewController.swift in Sources */,
+				F4D507332A5701DC000E741B /* InfoText.swift in Sources */,
 				F4D507272A55D222000E741B /* HabitViewController.swift in Sources */,
 				F4D507052A55CC4E000E741B /* AppDelegate.swift in Sources */,
 				F4D507072A55CC4E000E741B /* SceneDelegate.swift in Sources */,

@@ -2,6 +2,8 @@ import UIKit
 
 class HabitsViewController: UIViewController {
     
+    var progressCell: ProgressCollectionViewCell?
+    
     var topView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -132,6 +134,7 @@ extension HabitsViewController: UICollectionViewDataSource, UICollectionViewDele
         
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProgressCollectionViewCell.id, for: indexPath) as! ProgressCollectionViewCell
+            progressCell = cell
             cell.update()
             return cell
         }
@@ -139,7 +142,7 @@ extension HabitsViewController: UICollectionViewDataSource, UICollectionViewDele
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitCollectionViewCell.id, for: indexPath) as! HabitCollectionViewCell
             let habit = HabitsStore.shared.habits[indexPath.row]
-            cell.update(with: habit)
+            cell.update(with: habit, progressCell: progressCell)
             return cell
         }
         return UICollectionViewCell()

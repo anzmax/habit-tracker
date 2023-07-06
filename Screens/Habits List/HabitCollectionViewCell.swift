@@ -3,6 +3,7 @@ import UIKit
 class HabitCollectionViewCell: UICollectionViewCell {
     
     var habit: Habit?
+    var progressCell: ProgressCollectionViewCell?
     
     static let id = "HabitCollectionViewCell"
     
@@ -26,7 +27,6 @@ class HabitCollectionViewCell: UICollectionViewCell {
     }()
     
     lazy var colorButton: UIButton = {
-        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "circle"), for: .normal)
@@ -34,8 +34,6 @@ class HabitCollectionViewCell: UICollectionViewCell {
         button.contentVerticalAlignment = .fill
         button.contentHorizontalAlignment = .fill
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
-        
-        
         return button
     }()
     
@@ -115,9 +113,9 @@ class HabitCollectionViewCell: UICollectionViewCell {
     
 //MARK: - ACTIONS
     
-    func update(with habit: Habit) {
+    func update(with habit: Habit, progressCell: ProgressCollectionViewCell?) {
         self.habit = habit
-        print(habit)
+        self.progressCell = progressCell
         
         nameLabel.text = habit.name
         timeLabel.text = habit.dateString
@@ -138,6 +136,8 @@ class HabitCollectionViewCell: UICollectionViewCell {
         
         if let habit = habit {
             HabitsStore.shared.track(habit)
+            progressCell?.update()
         }
+        
     }
 }

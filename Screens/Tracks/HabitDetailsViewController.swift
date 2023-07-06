@@ -1,6 +1,6 @@
 import UIKit
 
-class HabitDetailsViewController: UIViewController {
+final class HabitDetailsViewController: UIViewController {
     
     let habit: Habit
     let store = HabitsStore.shared
@@ -117,7 +117,6 @@ extension HabitDetailsViewController: UITableViewDelegate {
         
         let date = dates[indexPath.row]
         if store.habit(self.habit, isTrackedIn: date) == false {
-            
             return 0
         }
         return UITableView.automaticDimension

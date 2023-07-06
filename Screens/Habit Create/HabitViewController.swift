@@ -196,7 +196,6 @@ class HabitViewController: UIViewController {
             topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             topView.heightAnchor.constraint(equalToConstant: 60),
             
-            
             topView.topAnchor.constraint(equalTo: view.topAnchor),
             topView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -279,7 +278,6 @@ class HabitViewController: UIViewController {
         }
         
         guard selectedColor != .white else {
-            print("Цвет не выбран")
             let alertController = UIAlertController(title: "Цвет не выбран", message: "", preferredStyle: .alert)
             self.present(alertController, animated: true)
             
@@ -357,7 +355,6 @@ class HabitViewController: UIViewController {
             updateHabit()
         }
     }
-    
     
     @objc func showAlert() {
         

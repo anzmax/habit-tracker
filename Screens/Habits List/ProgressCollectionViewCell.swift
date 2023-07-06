@@ -83,13 +83,12 @@ class ProgressCollectionViewCell: UICollectionViewCell {
             percentageLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             percentageLabel.widthAnchor.constraint(equalToConstant: 95),
             percentageLabel.heightAnchor.constraint(equalToConstant: 18)
-            
         ])
     }
     
 //MARK: - ACTIONS
     
-    func update() {
+   open func update() {
         progressView.progress = habitsStore.todayProgress
         percentageLabel.text = "\(habitsStore.todayProgress * 100)%"
     }
