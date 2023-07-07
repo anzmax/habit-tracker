@@ -49,7 +49,6 @@ final class HabitDetailsViewController: UIViewController {
         return tableView
     }()
     
-    
     init(habit: Habit) {
         self.habit = habit
         super.init(nibName: nil, bundle: nil)
@@ -70,7 +69,6 @@ final class HabitDetailsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
     }
-    
     
     func setupViews() {
         view.backgroundColor = .systemGray5

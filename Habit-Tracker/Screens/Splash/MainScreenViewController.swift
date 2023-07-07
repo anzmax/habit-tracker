@@ -1,6 +1,6 @@
 import UIKit
 
-class MainScreenViewController: UIViewController {
+final class MainScreenViewController: UIViewController {
     
     var logoImageView: UIImageView = {
         let logo = UIImageView()

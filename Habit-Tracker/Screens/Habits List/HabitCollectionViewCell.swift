@@ -1,6 +1,6 @@
 import UIKit
 
-class HabitCollectionViewCell: UICollectionViewCell {
+final class HabitCollectionViewCell: UICollectionViewCell {
     
     var habit: Habit?
     var progressCell: ProgressCollectionViewCell?
@@ -138,6 +138,5 @@ class HabitCollectionViewCell: UICollectionViewCell {
             HabitsStore.shared.track(habit)
             progressCell?.update()
         }
-        
     }
 }

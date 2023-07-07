@@ -1,6 +1,6 @@
 import UIKit
 
-class HabitViewController: UIViewController {
+final class HabitViewController: UIViewController {
     
     let store = HabitsStore.shared
     var habit: Habit?
@@ -184,7 +184,6 @@ class HabitViewController: UIViewController {
         contentView.addSubview(timePickerView)
         contentView.addSubview(timeField)
     }
-    
     
     func setupConstraints() {
         let safeArea = view.safeAreaLayoutGuide

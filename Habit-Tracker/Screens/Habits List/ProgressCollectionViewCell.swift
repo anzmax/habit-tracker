@@ -1,6 +1,6 @@
 import UIKit
 
-class ProgressCollectionViewCell: UICollectionViewCell {
+final class ProgressCollectionViewCell: UICollectionViewCell {
     
     private var habitsStore = HabitsStore.shared
     
@@ -34,7 +34,6 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -58,8 +57,6 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
     }
-    
-    
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -88,7 +85,7 @@ class ProgressCollectionViewCell: UICollectionViewCell {
     
 //MARK: - ACTIONS
     
-   open func update() {
+    public func update() {
         progressView.progress = habitsStore.todayProgress
         percentageLabel.text = "\(habitsStore.todayProgress * 100)%"
     }

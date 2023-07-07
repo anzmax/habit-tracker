@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F4D507052A55CC4E000E741B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D507042A55CC4E000E741B /* AppDelegate.swift */; };
 		F4D507072A55CC4E000E741B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D507062A55CC4E000E741B /* SceneDelegate.swift */; };
-		F4D507092A55CC4E000E741B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D507082A55CC4E000E741B /* ViewController.swift */; };
 		F4D5070C2A55CC4E000E741B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D5070A2A55CC4E000E741B /* Main.storyboard */; };
 		F4D5070E2A55CC4F000E741B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D5070D2A55CC4F000E741B /* Assets.xcassets */; };
 		F4D507112A55CC4F000E741B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D5070F2A55CC4F000E741B /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 		F4D507012A55CC4E000E741B /* Habit-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D507042A55CC4E000E741B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D507062A55CC4E000E741B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F4D507082A55CC4E000E741B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4D5070B2A55CC4E000E741B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4D5070D2A55CC4F000E741B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D507102A55CC4F000E741B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,9 +56,6 @@
 		F4D506F82A55CC4E000E741B = {
 			isa = PBXGroup;
 			children = (
-				F4D507182A55CEF6000E741B /* App */,
-				F4D507192A55CF30000E741B /* Screens */,
-				F4D5071F2A55CFC9000E741B /* Services */,
 				F4D507032A55CC4E000E741B /* Habit-Tracker */,
 				F4D507022A55CC4E000E741B /* Products */,
 			);
@@ -77,10 +72,10 @@
 		F4D507032A55CC4E000E741B /* Habit-Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				F4D5070D2A55CC4F000E741B /* Assets.xcassets */,
-				F4D5070A2A55CC4E000E741B /* Main.storyboard */,
-				F4D5070F2A55CC4F000E741B /* LaunchScreen.storyboard */,
-				F4D507122A55CC4F000E741B /* Info.plist */,
+				F4D507182A55CEF6000E741B /* App */,
+				F4D507192A55CF30000E741B /* Screens */,
+				F4D5071F2A55CFC9000E741B /* Services */,
+				F4D507342A57F743000E741B /* Resources */,
 			);
 			path = "Habit-Tracker";
 			sourceTree = "<group>";
@@ -90,7 +85,6 @@
 			children = (
 				F4D507042A55CC4E000E741B /* AppDelegate.swift */,
 				F4D507062A55CC4E000E741B /* SceneDelegate.swift */,
-				F4D507082A55CC4E000E741B /* ViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -156,6 +150,17 @@
 				F4D507202A55D165000E741B /* HabitsStore.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F4D507342A57F743000E741B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4D5070D2A55CC4F000E741B /* Assets.xcassets */,
+				F4D5070A2A55CC4E000E741B /* Main.storyboard */,
+				F4D5070F2A55CC4F000E741B /* LaunchScreen.storyboard */,
+				F4D507122A55CC4F000E741B /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D507212A55D165000E741B /* HabitsStore.swift in Sources */,
-				F4D507092A55CC4E000E741B /* ViewController.swift in Sources */,
 				F4D507332A5701DC000E741B /* InfoText.swift in Sources */,
 				F4D507272A55D222000E741B /* HabitViewController.swift in Sources */,
 				F4D507052A55CC4E000E741B /* AppDelegate.swift in Sources */,
@@ -388,7 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habit-Tracker/Info.plist";
+				INFOPLIST_FILE = "Habit-Tracker/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -415,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habit-Tracker/Info.plist";
+				INFOPLIST_FILE = "Habit-Tracker/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

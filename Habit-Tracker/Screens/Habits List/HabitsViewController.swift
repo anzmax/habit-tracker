@@ -1,6 +1,6 @@
 import UIKit
 
-class HabitsViewController: UIViewController {
+final class HabitsViewController: UIViewController {
     
     var progressCell: ProgressCollectionViewCell?
     
@@ -18,13 +18,11 @@ class HabitsViewController: UIViewController {
         return view
     }()
     
-    
     lazy var addBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(systemName: "plus")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(addButtonTapped))
         button.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
         return button
     }()
-    
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -40,7 +38,6 @@ class HabitsViewController: UIViewController {
         collectionView.register(HabitCollectionViewCell.self, forCellWithReuseIdentifier: HabitCollectionViewCell.id)
         return collectionView
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
