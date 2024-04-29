@@ -12,7 +12,7 @@ final class HabitDetailsViewController: UIViewController {
     
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ru_RU")
+        formatter.locale = Locale(identifier: "en_GB")
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         formatter.doesRelativeDateFormatting = true
@@ -34,7 +34,7 @@ final class HabitDetailsViewController: UIViewController {
     }()
     
     lazy var changeBarButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(title: "Править", style: .plain, target: self, action: #selector(changeHabit))
+        let button = UIBarButtonItem(title: "Править".localized, style: .plain, target: self, action: #selector(changeHabit))
         button.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
         return button
     }()
@@ -151,11 +151,11 @@ extension HabitDetailsViewController: UITableViewDataSource {
         }
         
         if Calendar.current.isDateInToday(date) {
-            cell.textLabel?.text = "Сегодня"
+            cell.textLabel?.text = "Сегодня".localized
         } else if Calendar.current.isDateInYesterday(date) {
-            cell.textLabel?.text = "Вчера"
+            cell.textLabel?.text = "Вчера".localized
         } else if Calendar.current.isDateInDayBeforeYesterday(date) {
-            cell.textLabel?.text = "Позавчера"
+            cell.textLabel?.text = "Позавчера".localized
         } else {
             cell.textLabel?.text = dateFormatter.string(from: date)
         }
@@ -167,7 +167,7 @@ extension HabitDetailsViewController: UITableViewDataSource {
         headerView.backgroundColor = .clear
         let label = UILabel()
         label.frame = CGRect(x: 16, y: 0, width: tableView.frame.width - 32, height: 20)
-        label.text = "АКТИВНОСТЬ"
+        label.text = "АКТИВНОСТЬ".localized
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.textColor = .gray
         headerView.addSubview(label)

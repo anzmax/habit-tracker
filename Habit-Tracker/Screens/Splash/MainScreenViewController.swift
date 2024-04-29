@@ -33,7 +33,7 @@ final class MainScreenViewController: UIViewController {
     
     func openTabBarControllerAfterDelay() {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.8) {
             
             let habitsVC = HabitsViewController()
             let infoVC = InfoViewController()
@@ -41,13 +41,13 @@ final class MainScreenViewController: UIViewController {
             let habitsNav = UINavigationController(rootViewController: habitsVC)
             let habitsImage = UIImage(systemName: "rectangle.grid.1x2.fill")
             let habitsSelectedImage = UIImage(systemName: "rectangle.grid.1x2.fill")?.withTintColor(UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0), renderingMode: .alwaysOriginal)
-            habitsNav.tabBarItem = UITabBarItem(title: "Привычки", image: habitsImage, selectedImage: habitsSelectedImage)
+            habitsNav.tabBarItem = UITabBarItem(title: "Привычки".localized, image: habitsImage, selectedImage: habitsSelectedImage)
             habitsNav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)], for: .selected)
             
             let infoNav = UINavigationController(rootViewController: infoVC)
             let infoImage = UIImage(systemName: "info.circle.fill")
             let infoSelectedImage = UIImage(systemName: "info.circle.fill")?.withTintColor(UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0), renderingMode: .alwaysOriginal)
-            infoNav.tabBarItem = UITabBarItem(title: "Информация", image: infoImage, selectedImage: infoSelectedImage)
+            infoNav.tabBarItem = UITabBarItem(title: "Информация".localized, image: infoImage, selectedImage: infoSelectedImage)
             infoNav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)], for: .selected)
             
             let tabBarController = UITabBarController()

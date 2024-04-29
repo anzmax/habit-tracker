@@ -9,7 +9,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     let progressLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Все получится!"
+        label.text = "Все получится!".localized
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label.textColor = .systemGray

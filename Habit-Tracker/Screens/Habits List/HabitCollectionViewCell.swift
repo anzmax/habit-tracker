@@ -50,7 +50,7 @@ final class HabitCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.textColor = .systemGray
-        label.text = "Счетчик: 0"
+        label.text = "Счетчик: 0".localized
         return label
     }()
     
@@ -119,7 +119,7 @@ final class HabitCollectionViewCell: UICollectionViewCell {
         
         nameLabel.text = habit.name
         timeLabel.text = habit.dateString
-        dateLabel.text = habit.isAlreadyTakenToday ? "Сегодня выполнено" : "Еще не выполнено"
+        dateLabel.text = habit.isAlreadyTakenToday ? "Сегодня выполнено".localized : "Еще не выполнено".localized
         colorButton.tintColor = habit.color
         nameLabel.textColor = habit.color
         
@@ -128,7 +128,7 @@ final class HabitCollectionViewCell: UICollectionViewCell {
         }
         
         let counter = habit.trackDates.count
-        counterLabel.text = "Счетчик: \(counter)"
+        counterLabel.text = "\(NSLocalizedString("Counter", comment: "")): \(counter)"
     }
     
     @objc func colorButtonTapped() {

@@ -35,7 +35,7 @@ final class InfoViewController: UIViewController {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Привычка за 21 день"
+        label.text = "Привычка за 21 день".localized
         label.font = UIFont(name: "SF Pro Display", size: 20)
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         return label
@@ -59,7 +59,7 @@ final class InfoViewController: UIViewController {
     
     
     func setupViews() {
-        title = "Информация"
+        title = "Информация".localized
         view.backgroundColor = .white
         
         view.addSubview(topView)

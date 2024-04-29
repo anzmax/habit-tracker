@@ -29,13 +29,13 @@ final class HabitViewController: UIViewController {
     }()
     
     lazy var cancelBarButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(cancelButtonTapped))
+        let button = UIBarButtonItem(title: "Отмена".localized, style: .plain, target: self, action: #selector(cancelButtonTapped))
         button.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
         return button
     }()
     
     lazy var saveBarButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(title: "Сохранить", style: .plain, target: self, action: #selector(saveButtonTapped))
+        let button = UIBarButtonItem(title: "Сохранить".localized, style: .plain, target: self, action: #selector(saveButtonTapped))
         button.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
         
         return button
@@ -60,14 +60,14 @@ final class HabitViewController: UIViewController {
     var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "НАЗВАНИЕ"
+        label.text = "НАЗВАНИЕ".localized
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         return label
     }()
     
     lazy var textField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Бегать по утрам, спать 8 часов и т.п."
+        textField.placeholder = "Бегать по утрам, спать 8 часов и т.п.".localized
         textField.textColor = .black
         textField.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         textField.backgroundColor = .white
@@ -84,7 +84,7 @@ final class HabitViewController: UIViewController {
     var colorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "ЦВЕТ"
+        label.text = "ЦВЕТ".localized
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         return label
     }()
@@ -92,7 +92,7 @@ final class HabitViewController: UIViewController {
     var timeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "ВРЕМЯ"
+        label.text = "ВРЕМЯ".localized
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         return label
     }()
@@ -110,14 +110,14 @@ final class HabitViewController: UIViewController {
     var chooseTimeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Каждый день в"
+        label.text = "Каждый день в ".localized
         label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         return label
     }()
     
     lazy var deleteHabitButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Удалить привычку", for: .normal)
+        button.setTitle("Удалить привычку".localized, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
         button.backgroundColor = .white
@@ -151,9 +151,9 @@ final class HabitViewController: UIViewController {
         
         if habit == nil {
             deleteHabitButton.isHidden = true
-            title = "Создать"
+            title = "Создать".localized
         } else {
-            title = "Править"
+            title = "Править".localized
         }
     }
     
@@ -219,12 +219,11 @@ final class HabitViewController: UIViewController {
             
             textField.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 46),
             textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            textField.widthAnchor.constraint(equalToConstant: 295),
+            textField.widthAnchor.constraint(equalToConstant: 310),
             textField.heightAnchor.constraint(equalToConstant: 22),
             
             colorLabel.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 83),
             colorLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            colorLabel.widthAnchor.constraint(equalToConstant: 36),
             colorLabel.heightAnchor.constraint(equalToConstant: 18),
             
             timeLabel.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 153),
@@ -267,7 +266,7 @@ final class HabitViewController: UIViewController {
     
     func addNewHabit() {
         guard let timeString = timeField.text, !timeString.isEmpty else {
-            let alertController = UIAlertController(title: "Время не выбрано", message: "", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Время не выбрано".localized, message: "", preferredStyle: .alert)
             self.present(alertController, animated: true)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -277,7 +276,7 @@ final class HabitViewController: UIViewController {
         }
         
         guard selectedColor != .white else {
-            let alertController = UIAlertController(title: "Цвет не выбран", message: "", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Цвет не выбран".localized, message: "", preferredStyle: .alert)
             self.present(alertController, animated: true)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -287,7 +286,7 @@ final class HabitViewController: UIViewController {
         }
         
         guard let habitName = textField.text, !habitName.isEmpty else {
-            let alertController = UIAlertController(title: "Введите название", message: "", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Введите название".localized, message: "", preferredStyle: .alert)
             self.present(alertController, animated: true)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -335,7 +334,7 @@ final class HabitViewController: UIViewController {
                 store.habits.insert(newHabit, at: 0)
                 dismiss(animated: true)
             } else {
-                let alertController = UIAlertController(title: "Введите название", message: "", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Введите название".localized, message: "", preferredStyle: .alert)
                 self.present(alertController, animated: true)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -357,9 +356,13 @@ final class HabitViewController: UIViewController {
     
     @objc func showAlert() {
         
-        let alertController = UIAlertController(title: "Удалить привычку", message: "Вы хотите удалить привычку \"\(textField.text ?? "")\"?", preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: NSLocalizedString("Delete habit", comment: ""),
+            message: String(format: NSLocalizedString("Do you want to delete the habit %@", comment: ""), textField.text ?? ""),
+            preferredStyle: .alert
+        )
         
-        let okAction = UIAlertAction(title: "Удалить", style: .default) {_ in
+        let okAction = UIAlertAction(title: "Удалить".localized, style: .default) {_ in
             if let currentHabit = self.habit {
                 self.store.habits.removeAll { $0.id == currentHabit.id }
                 
@@ -373,7 +376,7 @@ final class HabitViewController: UIViewController {
             self.dismiss(animated: true)
         }
         
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Отмена".localized, style: .cancel)
         
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)

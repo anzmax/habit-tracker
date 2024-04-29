@@ -38,7 +38,7 @@ public final class Habit: Codable, CustomStringConvertible {
     
     /// Описание времени выполнения привычки.
     public var dateString: String {
-        "Каждый день в " + dateFormatter.string(from: date)
+        "Каждый день в ".localized + dateFormatter.string(from: date)
     }
     
     /// Показывает, была ли сегодня добавлена привычка.

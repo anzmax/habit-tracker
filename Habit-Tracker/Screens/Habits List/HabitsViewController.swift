@@ -61,7 +61,7 @@ final class HabitsViewController: UIViewController {
     
     func setupViews() {
         view.backgroundColor = .white
-        title = "Сегодня"
+        title = "Сегодня".localized
         navigationItem.rightBarButtonItem = addBarButton
         
         view.addSubview(topView)
