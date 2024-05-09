@@ -18,16 +18,13 @@ This iOS app is designed to track and manage user habits efficiently. It include
 - Offers daily habit management with support for localization and advanced date-time formatting.
 - Ideal for users aiming to maintain an organized and productive lifestyle.
 
-<table>
-  <tr>
-    <td><img src="https://github.com/anzmax/habit-tracker/blob/main/1.png" alt="Image 1" width="300"/></td>
-    <td><img src="https://github.com/anzmax/habit-tracker/blob/main/2.png" alt="Image 2" width="300"/></td>
-    <td><img src="https://github.com/anzmax/habit-tracker/blob/main/3.png" alt="Image 3" width="300"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/anzmax/habit-tracker/blob/main/4.png" alt="Image 4" width="300"/></td>
-    <td><img src="https://github.com/anzmax/habit-tracker/blob/main/5.png" alt="Image 5" width="300"/></td>
-    <td><img src="https://github.com/anzmax/habit-tracker/blob/main/6.png" alt="Image 6" width="300"/></td>
-  </tr>
-</table>
+<div style="display: flex; flex-wrap: wrap;">
+    <img src="https://github.com/anzmax/habit-tracker/blob/main/1.png" alt="Image 1" style="width: 30%;" />
+    <img src="https://github.com/anzmax/habit-tracker/blob/main/2.png" alt="Image 2" style="width: 30%;" />
+    <img src="https://github.com/anzmax/habit-tracker/blob/main/3.png" alt="Image 3" style="width: 30%;" />
+    <img src="https://github.com/anzmax/habit-tracker/blob/main/4.png" alt="Image 4" style="width: 30%;" />
+    <img src="https://github.com/anzmax/habit-tracker/blob/main/5.png" alt="Image 5" style="width: 30%;" />
+    <img src="https://github.com/anzmax/habit-tracker/blob/main/6.png" alt="Image 6" style="width: 30%;" />
+</div>
+
 
